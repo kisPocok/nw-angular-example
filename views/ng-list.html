@@ -1,0 +1,10 @@
+
+<div class="container">
+    <template ngFor #movie [ngForOf]="movies">
+        <div class="row  movie-row" [ngClass]="{active: movie.active}" (click)="movieClick($event, movie)">
+            <div class="col-xs-9">
+                <h1 class="movie-title">{{ movie.title }}</h1>
+            </div>
+        </div>
+    </template>
+</div>
